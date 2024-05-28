@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Paytone+One&family=Poetsen+One&family=Righteous&display=swap");
+* {
+  box-sizing: border-box;
+  text-decoration: none !important;
+}
+.book-marker-info {
+  padding: 30px 0 60px 0;
+  border-bottom: 2px dotted white;
+}
+.head-of-book-marker {
+  width: fit-content;
+  position: relative;
+}
+.head-of-book-marker h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 500;
+  font-size: 3.125rem;
+  position: relative;
+  z-index: 999;
+}
+.back-ground {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 25%;
+  background-color: #fec260;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+}
+.head-of-book-marker:hover .back-ground {
+  height: 52%;
+}
+.book-marker-body h2 {
+  font-family: "Righteous", cursive;
+  font-size: 25px;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.form-control:focus,
+.form-control {
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+.submitBtn {
+  width: 150px;
+  height: 45px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(to left, rgb(230, 35, 0), rgb(255, 174, 0));
+  letter-spacing: 0.7px;
+}
+.btn-updating {
+  width: 150px;
+  height: 45px;
+  border-radius: 8px;
+}
+.book-marker-body {
+  border-bottom: 2px dotted white;
+}
+.submitBtn:hover .arrow {
+  animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.submitBtn:active {
+  transform: scale(0.97);
+}
+
+/* 
+==================> button visit
+*/
+.btn-visit {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  padding: 8px 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-visit span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-visit svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-visit:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.btn-visit:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.btn-visit:hover span {
+  transform: translateX(5em);
+}
+
+.btn-visit:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+/* 
+==============> modal
+*/
+.box-modal {
+  width: 40%;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+span.rounded-circle {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1200px) {
+  .box-modal {
+    width: 50%;
+  }
+}
+@media (max-width: 992px) {
+  .box-modal {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .box-modal {
+    width: 80%;
+  }
+}
+@media (max-width: 543px) {
+  .btn-delete {
+    width: 99px;
+  }
+  .btn-update {
+    margin-top: 5px;
+    width: 99px;
+  }
+  .box-modal {
+    width: 88%;
+  }
+}

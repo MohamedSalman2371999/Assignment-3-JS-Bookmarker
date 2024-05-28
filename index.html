@@ -1,0 +1,161 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bookmarker</title>
+  </head>
+  <body class="bg-dark">
+    <section class="book-marker">
+      <div class="container">
+        <div class="book-marker-info">
+          <div
+            class="head-of-book-marker m-auto pt-3 text-white animate__animated animate__fadeInDown"
+          >
+            <h1>Bookmarker</h1>
+            <div class="back-ground"></div>
+          </div>
+        </div>
+        <div class="book-marker-body">
+          <h2 class="text-center pt-3 animate__animated animate__fadeInDown">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <div
+            class="site-name w-100 d-flex flex-column justify-content-center mb-4 animate__animated animate__fadeInLeft"
+          >
+            <label for="bookmarkName" class="pb-2 fw-semibold text-white">
+              <i class="fa-solid fa-book-bookmark pe-2"></i>
+              Site Name</label
+            >
+            <input
+              type="text"
+              placeholder="Bookmark Name"
+              class="form-control"
+              id="bookmarkName"
+              oninput="validationInput(this)"
+            />
+          </div>
+          <div
+            class="site-url w-100 d-flex flex-column justify-content-center animate__animated animate__fadeInRight"
+          >
+            <label for="bookmarkURL" class="pb-2 fw-semibold text-white">
+              <i class="fa-solid fa-link pe-2"></i>Site URL</label
+            >
+            <input
+              type="url"
+              placeholder="Website URL"
+              class="form-control"
+              id="bookmarkUrl"
+              oninput="validationInput(this)"
+            />
+          </div>
+          <div
+            class="add-update-container d-flex justify-content-center animate__animated animate__fadeInDown"
+          >
+            <button
+              onclick="addBookmark()"
+              class="submitBtn my-4"
+              id="submitBtn"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Submit
+              <svg
+                fill="white"
+                viewBox="0 0 448 512"
+                height="1em"
+                class="arrow"
+              >
+                <path
+                  d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                ></path>
+              </svg>
+            </button>
+            <button
+              onclick="upDateBookmark()"
+              class="btn-updating d-none my-4 btn btn-outline-warning"
+              id="UpdateBtn"
+            >
+              Updating
+              <i class="fa fa-pencil"></i>
+            </button>
+          </div>
+        </div>
+        <input
+          type="text"
+          class="form-control w-25 ms-auto searchInput mt-3 animate__animated animate__fadeInRight"
+          placeholder="Search by Website Name.."
+          id="search"
+          oninput="searching()"
+        />
+        <table class="table mt-4 text-center bg-light">
+          <thead>
+            <tr>
+              <th class="text-capitalize">index</th>
+              <th class="text-capitalize">Website Name</th>
+              <th class="text-capitalize">Visit</th>
+              <th class="text-capitalize">Options</th>
+            </tr>
+          </thead>
+          <tbody id="tableContent"></tbody>
+        </table>
+      </div>
+    </section>
+    <!-- Modal -->
+    <div
+      class="box-modal d-none position-absolute d-flex justify-content-center align-items-center"
+      id="modalShown"
+    >
+      <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+        <div
+          class="box-header d-flex justify-content-between align-items-center mb-4"
+        >
+          <div class="circles d-flex">
+            <span class="rounded-circle me-2 bg-danger"></span>
+            <span class="rounded-circle me-2 bg-warning"></span>
+            <span class="rounded-circle me-2 bg-success"></span>
+          </div>
+          <button class="btn border-0" id="closeBtn" onclick="closeModal()">
+            <i class="fa-solid fa-xmark close fs-3"></i>
+          </button>
+        </div>
+        <p class="m-0 pb-2 fs-4 fw-bold">
+          Site Name or Url is not valid, Please follow the rules below :
+        </p>
+        <ol class="rules list-unstyled m-0">
+          <li>
+            <i class="fa-regular fa-circle-right p-2"></i>Site name must contain
+            at least 3 characters
+          </li>
+          <li>
+            <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+            valid one
+          </li>
+        </ol>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
