@@ -4,7 +4,7 @@
   text-decoration: none !important;
 }
 .book-marker-info {
-  padding: 30px 0 60px 0;
+  padding: 5px 0 60px 0;
   border-bottom: 2px dotted white;
 }
 .head-of-book-marker {
@@ -14,7 +14,7 @@
 .head-of-book-marker h1 {
   font-family: "Pacifico", cursive;
   font-weight: 500;
-  font-size: 3.125rem;
+  font-size: 3.525rem;
   position: relative;
   z-index: 999;
 }
@@ -29,7 +29,7 @@
   transition: all 0.3s ease-in-out;
 }
 .head-of-book-marker:hover .back-ground {
-  height: 52%;
+  height: 47%;
 }
 .book-marker-body h2 {
   font-family: "Righteous", cursive;
