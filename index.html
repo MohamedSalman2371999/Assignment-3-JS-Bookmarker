@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Bookmarker</title>
@@ -24,7 +25,7 @@
           <div
             class="head-of-book-marker m-auto pt-3 text-white animate__animated animate__fadeInDown"
           >
-            <h1>Bookmarker</h1>
+            <h1 class="cssanimation effect3d">Bookmarker</h1>
             <div class="back-ground"></div>
           </div>
         </div>
@@ -102,7 +103,7 @@
           id="search"
           oninput="searching()"
         />
-        <table class="table mt-4 text-center bg-light">
+        <table class="table mt-4 text-center bg-light overflow-hidden">
           <thead>
             <tr>
               <th class="text-capitalize">index</th>
@@ -138,8 +139,10 @@
         </p>
         <ol class="rules list-unstyled m-0">
           <li class="d-flex">
-            <i class="fa-regular fa-circle-right p-2"></i><p class="p-validation">
-              The site name must contain at least 3 characters starting with a capital letter
+            <i class="fa-regular fa-circle-right p-2"></i>
+            <p class="p-validation">
+              The site name must contain at least 3 characters starting with a
+              capital letter
             </p>
           </li>
           <li>
@@ -150,6 +153,7 @@
       </div>
     </div>
     <script src="js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
       new WOW().init();
