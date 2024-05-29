@@ -158,7 +158,9 @@ span.rounded-circle {
   width: 20px;
   height: 20px;
 }
-
+.p-validation{
+  margin-top: .1563rem;
+}
 @media (max-width: 1200px) {
   .box-modal {
     width: 50%;
