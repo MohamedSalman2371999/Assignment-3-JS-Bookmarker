@@ -257,7 +257,7 @@ function upDateBookmark() {
 function validationInput(elemnt) {
   var regex = {
     bookmarkName: /^[A-Z]\w{3,10}$/,
-    bookmarkUrl: /^(https:\/\/|www.|[A-Z])(www.)?\w{3,10}\.com$/,
+    bookmarkUrl: /^(https:\/\/|www\.|[A-Z]|[a-z])(www\.)?\w{3,10}\.com$/,
   };
   var textInput = elemnt.value;
   if (regex[elemnt.id].test(textInput)) {
